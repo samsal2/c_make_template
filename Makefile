@@ -1,15 +1,9 @@
 .POSIX:
 .SUFFIXES:
 
-NAME = c_make_template
+include config.mk
 
-WARNFLAGS = -Wall -Wextra -Wshadow -pedantic -pedantic-errors
-SANITIZEFLAGS = -fsanitize=address -fsanitize=undefined -fsanitize=bounds
-
-PCFLAGS = $(WARNFLAGS) $(SANITIZEFLAGS) $(CFLAGS)
-PLDFLAGS = $(SANITIZEFLAGS) $(LDFLAGS)
-
-SRC = main.c
+SRC = $(NAME).c
 OBJ = $(SRC:.c=.o) 
 DEP = $(SRC:.c=.d)
 
