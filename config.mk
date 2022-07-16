@@ -9,5 +9,5 @@ WARN =  -Wall -Wextra -Wshadow -pedantic -pedantic-errors
 SANITIZE = -fsanitize=address -fsanitize=undefined -fsanitize=bounds
 
 PCFLAGS = $(INC) $(WARN) $(CFLAGS)
-PLDFLAGS = $(SANITIZE) $(LDFLAGS)
+PLDFLAGS = $(LIB) $(SANITIZE) $(LDFLAGS)
 
